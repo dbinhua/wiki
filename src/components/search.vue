@@ -2,7 +2,7 @@
   <div id="continer">
     <div style="width: 100vw;height: 10vh;">
       <Icon type="md-settings" color="grey" size="25" id="setting-icon" @click="drawer = true"/>
-      <Drawer :closable="false" v-model="drawer" width="220">
+      <Drawer :closable="false" v-model="drawer" width="220" title="设置">
         <List :split="false">
           <ListItem>
             <span>小伙伴上线提醒</span>
