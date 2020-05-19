@@ -18,7 +18,7 @@
       </Select>
       <br><br>
       <List header="搜索历史" border v-if="search_history">
-        <ListItem v-for="(item,index) in search_history" v-if="index < 5">
+        <ListItem v-for="(item, index) in historyFilter" :key="index">
           <a @click="toDetail(item.api)">{{ item.api }}</a>
           <Time :time="item.time" style="position:absolute;right:24px;color: #9ea7b4"/>
         </ListItem>
@@ -53,7 +53,13 @@ export default {
     this.$emit('onNoticeVal', this.getOnlineNotice())
     this.init()
   },
-
+  computed: {
+    historyFilter () {
+      return this.search_history.filter(function (item, index) {
+        return index <= 5
+      })
+    }
+  },
   methods: {
     init () {
       var history = localStorage.getItem('search_history')
