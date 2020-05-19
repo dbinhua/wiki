@@ -6,7 +6,7 @@
         <List :split="false">
           <ListItem>
             <span>小伙伴上线提醒</span>
-            <i-switch v-model="userOnlineNotice" true-value="1" false-value="0" @on-change="setOnlineNotice" style="position:absolute;right:0px;"/>
+            <i-switch v-model="userOnlineNotice" true-value="1" false-value="0" @on-change="setOnlineNotice" style="position:absolute;right:0;"/>
           </ListItem>
         </List>
       </Drawer>
@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     init () {
-      var history = localStorage.getItem('search_history')
+      let history = localStorage.getItem('search_history')
       if (history !== 'undefined' && history !== null) {
         history = JSON.parse(history)
         this.search_history = history.reverse()
@@ -88,7 +88,7 @@ export default {
       this.$Message.success('操作成功')
     },
     getOnlineNotice () {
-      var userOnlineNotice = localStorage.getItem('userOnlineNotice')
+      let userOnlineNotice = localStorage.getItem('userOnlineNotice')
       if (userOnlineNotice === 'undefined' || userOnlineNotice === null) {
         userOnlineNotice = 0
       }
@@ -106,7 +106,7 @@ export default {
   #search_input_div {
     width: 40%;
     padding-top: 5%;
-    margin: 0px auto;
+    margin: 0 auto;
   }
 
   #title {
@@ -119,8 +119,8 @@ export default {
   #continer {
     width: 100vw;
     height: 100vh;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     background-image: url("../assets/background.svg");
   }
 

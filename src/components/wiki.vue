@@ -20,7 +20,7 @@
                         <Icon type="md-help-circle" color="grey"/>
                       </Tooltip>
                     </h2>
-                    <div style="text-align: left;margin: 30px 0px 0px 30px"><b>{{ real_api }}</b></div>
+                    <div style="text-align: left;margin: 30px 0 0 30px"><b>{{ real_api }}</b></div>
                   </div>
                   <br>
                   <div class="data-div">
@@ -214,7 +214,7 @@ export default {
 
   .error-img {
     margin: 10% auto;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     width: 60vw;
     height: 50vh;
     background-image: url("../assets/error-500.svg") ;
