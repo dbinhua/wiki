@@ -56,7 +56,7 @@ export default {
   computed: {
     historyFilter () {
       return this.search_history.filter(function (item, index) {
-        return index <= 5
+        return index < 5
       })
     }
   },
